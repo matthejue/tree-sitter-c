@@ -36,6 +36,18 @@ zig-out/
 # Example dirs
 /examples/*/
 
+# Tree-sitter CLI artifacts
+src/grammar.json
+src/node-types.json
+src/parser.c
+src/tree_sitter/
+tree-sitter.json
+
+# Tree-sitter test failures
+test/corpus/*.actual
+test/corpus/*.diff
+test/corpus/*.expected
+
 # Grammar volatiles
 *.wasm
 *.obj
