@@ -802,6 +802,7 @@ module.exports = grammar({
       $.goto_statement,
       $.seh_try_statement,
       $.seh_leave_statement,
+      $.debug_statement,
     ),
 
     _top_level_statement: $ => choice(
@@ -819,6 +820,7 @@ module.exports = grammar({
       $.break_statement,
       $.continue_statement,
       $.goto_statement,
+      $.debug_statement,
     ),
 
     labeled_statement: $ => seq(
@@ -917,6 +919,11 @@ module.exports = grammar({
     goto_statement: $ => seq(
       'goto',
       field('label', $._statement_identifier),
+      ';',
+    ),
+
+    debug_statement: _ => seq(
+      'debug',
       ';',
     ),
 
