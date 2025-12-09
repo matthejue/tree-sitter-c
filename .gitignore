@@ -41,7 +41,6 @@ src/grammar.json
 src/node-types.json
 src/parser.c
 src/tree_sitter/
-tree-sitter.json
 
 # Tree-sitter test failures
 test/corpus/*.actual
